@@ -30,10 +30,18 @@ class estacionados
 
 			foreach ($ArrayDePersonas as $personaAux)
 			{
+				if ($_SESSION['admin']!=2)
+				{
+					$botonBorrar="<input type='button' class='round medium orange button' value='Eliminar' id='btnEliminar' onclick='EliminarProducto($personaAux->id)'";
+				}
+				else
+				{
+					$botonBorrar="";
+				}
 				$tabla.= " 	<tr>
 							<td>".$personaAux->patente."</td>
 							<td>".$personaAux->porcentaje."</td>
-							<td><input type='button' class='round medium orange button' value='Eliminar' id='btnEliminar' onclick='EliminarProducto($personaAux->id)'/>
+							<td>".$botonBorrar."</td>
                                 
                          
 						</tr>";
