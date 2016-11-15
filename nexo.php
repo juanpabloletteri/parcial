@@ -16,6 +16,11 @@ if (isset($_POST['boton']))
 			echo("vacio");
 			return true;
 		}
+		else if ($_POST['porcentaje']<0 || $_POST['porcentaje']>100)
+		{
+			echo("rango");
+			return true;
+		}
 
 		//$auto=vehiculo::TraerUnVehiculo($_POST['patente']);
 

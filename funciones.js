@@ -26,6 +26,10 @@ function ingresar()
 				swal("Ingrese un Producto");
 				//alert("Ingrese una patente");
 			}
+			else if (resultado=="rango")
+				{
+					swal("Porcentaje ingresado fuera de rango");
+				};
 			/*else
 			{
 				swal("A facturar: $" + resultado, "" ,"success");
@@ -78,7 +82,7 @@ function login()
 			}
 			if (resultado=="ok")
 			{
-				window.location.href = "estacionamiento.php";
+				window.location.href = "gestion.php";
 			}
 			else if(resultado=="error")
 			{

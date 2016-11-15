@@ -23,7 +23,7 @@ class estacionados
 				<thead>
 					<tr>
 						<th>  Codigo   </th>
-						<th>  Nombre   </th>
+						<th>  Descripcion   </th>
 						<th>  Porcentaje   </th>
 						<th>  Accion   </th>				
 					</tr> 
