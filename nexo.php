@@ -47,6 +47,12 @@ if (isset($_POST['boton']))
 	else if ($_POST['boton']=="login")
 	{
 		$devolucion=usuario::login($_POST['usuario'], $_POST['pass']);
+		
+		if ($_POST['usuario']=="" || $_POST['pass']=="")
+		{
+			echo("vacio");
+			exit;
+		}
 
 		if ($devolucion!=false)
 		{
@@ -55,7 +61,7 @@ if (isset($_POST['boton']))
 			//var_dump($_SESSION);
 			echo("ok");
 		}
-		else
+		else if($devolucion==false)
 		{
 			echo("error");
 		}

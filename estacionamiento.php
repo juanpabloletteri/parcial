@@ -36,11 +36,24 @@ if (!isset($_SESSION['usuario']))
        -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.3), inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 6px rgba(0, 0, 0, 0.2);
   }
+
+
+h3 {
+    color:#fafafa;
+    display: block;
+    font-size: 1.17em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+
   </style>
 
 </head>
 <body>
-  <label><?php echo ("Bienvenido: ".$_SESSION['usuario']) ?></label>
+  <h3 >  <?php echo ("Bienvenido: ".$_SESSION['usuario']) ?> </h3>
   <section class="container">
  <div class="shadow-forms">
   <div class="message warning">

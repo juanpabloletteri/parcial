@@ -71,14 +71,18 @@ function login()
 	);
 	f.done (function(resultado)
 		{
+			
+			if (resultado=="vacio")
+			{
+				swal("Complete los campos");
+			}
 			if (resultado=="ok")
 			{
 				window.location.href = "estacionamiento.php";
 			}
-			else
+			else if(resultado=="error")
 			{
 				swal("Usuario o contraseña inexistentes");
-				//alert("Usuario o contraseña inexistentes");
 			}
 			
 		});
