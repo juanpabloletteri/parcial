@@ -33,6 +33,7 @@ class usuario
 		return $arrHistorial;
 	}
 
+
 	public static function ConstruirTabla()
 	{
 		$ArrayDePersonas = usuario::TraerTodosLosUsuarios();

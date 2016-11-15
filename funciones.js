@@ -183,15 +183,18 @@ function EliminarProducto(id)
 			type:"post",
 			data:
 			{
-				boton:"estacionados"
+				boton:"eliminarProducto",
+				id:id
 			}
 		}
 	);
 	f.done
 	(
+		
 		function(algo) 
 		{
 			$("#tabla").html(algo);
+			estacionados();
 		}
 	);	
 }

@@ -77,12 +77,18 @@ if (isset($_POST['boton']))
 		echo(usuario::ConstruirTabla()) ;
 	}
 
+	elseif ($_POST['boton']=="eliminarProducto") 
+	{
+		vehiculo::eliminarProducto($_POST['id']);
+	}
+
 	else if ($_POST['boton']=="salir")
 	{
 		session_unset();
 		session_destroy();
 		echo "salir";
 	}
+
 }
 
 function CalcularMonto($horas)

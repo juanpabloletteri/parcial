@@ -79,6 +79,13 @@ class vehiculo
 		//return $resultado;
 	}
 
+    public static function eliminarProducto($id) {
+        $objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso();
+        $consulta = $objetoAccesoDato->RetornarConsulta("DELETE FROM autos WHERE id = :id");
+        $consulta->bindValue(':id', $id, PDO::PARAM_INT);
+        $consulta->execute();
+        return $consulta->rowCount();
+    }
 
 	public static function TraerTodosLosVehiculos()
 	{
