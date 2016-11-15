@@ -52,13 +52,19 @@ if (!isset($_SESSION['usuario']))
         <p><input type="text" name="patente" id="patente" placeholder="Ingrese Nombre"></p>
         <p><input type="text" name="porcentaje" id="porcentaje" placeholder="Ingrese Porcentaje"></p>
         <br>
-        <button type="button" class="round medium blue button" onclick="ingresar()">Ingresar Producto</button>
+        
         <button type="button" class="round medium blue button" onclick="estacionados()">Lista de Productos</button>
         <?php
-          if ($_SESSION['admin']==1)
+          if ($_SESSION['admin']==0)
           {
-            echo('<button type="button" class="round medium purple button" onclick="tabla()">Recaudacion</button>');
+            //echo('<button type="button" class="round medium purple button" onclick="tabla()">Recaudacion</button>');
+            echo('<button type="button" class="round medium blue button" onclick="ingresar()">Ingresar Producto</button>');
             echo('<button type="button" class="round medium purple button" onclick="tablaUsuarios()">Usuarios</button>');
+
+          }
+          else if ($_SESSION['admin']==1)
+          {
+            echo('<button type="button" class="round medium blue button" onclick="ingresar()">Ingresar Producto</button>');
           }
         ?>
       </form>

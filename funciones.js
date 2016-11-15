@@ -208,8 +208,8 @@ function testAdministrador()
 	(
 		function() 
 		{
-			$("#usuario").val("admin");
-			$("#pass").val("admin");
+			$("#usuario").val("administrador");
+			$("#pass").val("1");
 		}
 	);	
 }
