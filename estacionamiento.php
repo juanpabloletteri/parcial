@@ -10,7 +10,7 @@ if (!isset($_SESSION['usuario']))
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>GESTION ESTACIONAMIENTO</title>
+  <title>GESTION</title>
   <link rel="stylesheet" href="css/style2.css">
   <link rel="stylesheet" href="css/buttons.css">
 
@@ -40,6 +40,7 @@ if (!isset($_SESSION['usuario']))
 
 </head>
 <body>
+  <label><?php echo ("Bienvenido: ".$_SESSION['usuario']) ?></label>
   <section class="container">
  <div class="shadow-forms">
   <div class="message warning">

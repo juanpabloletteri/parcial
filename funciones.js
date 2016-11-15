@@ -188,7 +188,7 @@ function testAdministrador()
 	);	
 }
 
-function testUsuario()
+function testVendedor()
 {
 	var f=$.ajax
 	({}	);
@@ -197,8 +197,23 @@ function testUsuario()
 	(
 		function() 
 		{
-			$("#usuario").val("usuario");
-			$("#pass").val("usuario");
+			$("#usuario").val("vendedor");
+			$("#pass").val("1");
+		}
+	);	
+}
+
+function testComprador()
+{
+	var f=$.ajax
+	({}	);
+
+	f.done
+	(
+		function() 
+		{
+			$("#usuario").val("comprador");
+			$("#pass").val("1");
 		}
 	);	
 }
