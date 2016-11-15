@@ -54,6 +54,8 @@ h3 {
 </head>
 <body>
   <h3 >  <?php echo ("Bienvenido: ".$_SESSION['usuario']) ?> </h3>
+<button type="button" class="round medium green button" onclick="editar(<?php echo($_SESSION['usuario']) ?>)">Editar</button>
+
   <section class="container">
  <div class="shadow-forms">
   <div class="message warning">

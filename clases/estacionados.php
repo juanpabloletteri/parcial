@@ -22,6 +22,7 @@ class estacionados
 		$tabla= "<table class='table table-hover table-responsive'>
 				<thead>
 					<tr>
+						<th>  Codigo   </th>
 						<th>  Nombre   </th>
 						<th>  Porcentaje   </th>
 						<th>  Accion   </th>				
@@ -39,6 +40,7 @@ class estacionados
 					$botonBorrar="";
 				}
 				$tabla.= " 	<tr>
+							<td>".$personaAux->id."</td>
 							<td>".$personaAux->patente."</td>
 							<td>".$personaAux->porcentaje."</td>
 							<td>".$botonBorrar."</td>
