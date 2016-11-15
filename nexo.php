@@ -17,24 +17,15 @@ if (isset($_POST['boton']))
 			return true;
 		}
 
-		$auto=vehiculo::TraerUnVehiculo($_POST['patente']);
+		//$auto=vehiculo::TraerUnVehiculo($_POST['patente']);
 
-		if ($auto->id==NULL)
+		//if ($auto->id==NULL)
 		{
 			echo ("ingresar");
-			vehiculo::ingresar($_POST['patente']);
-			//////////para cargar varios autos a la base
-			/*
-			for ($i=0; $i < 1000; $i++)
-			{ 
-				$random=rand(101,999);
-				$patente="grd".$random;
-				vehiculo::ingresar($patente);
-			}
-			*/
+			vehiculo::ingresar($_POST['patente'], $_POST['porcentaje']);
 			
 		}
-		else
+		/*else
 		{
 			//echo("cobrar");
 			$horas=(strtotime('now') - strtotime($auto->ingreso))/60/60 ;
@@ -44,19 +35,8 @@ if (isset($_POST['boton']))
 			vehiculo::retirar($_POST['patente']);
 			//var_dump($monto);
 			echo($monto);
-
-			/////////para cargar varias operaciones a la base (solo ingresar las 3 letras de la patente)
-			/*
-			for ($i=0; $i < 20; $i++)
-			{ 
-				$randomH=rand(1,11);
-				$randomP=rand(100,999);
-				$monto=CalcularMonto($randomH);
-				$patente=$_POST['patente'].$randomP;
-				vehiculo::registrar($patente,$randomH,$monto);
-			}*/
-			
-		}
+		
+		}*/
 
 		//var_dump(vehiculo::TraerUnVehiculo($_POST['patente']));	
 

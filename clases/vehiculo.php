@@ -14,18 +14,18 @@ class vehiculo
 		$this->ingreso=$ingreso;
 	}
 
-	public static function ingresar($patente)
+	public static function ingresar($patente, $porcentaje)
 	{
-		$ingreso=date("Y-m-d H:i:s");
+		//$ingreso=date("Y-m-d H:i:s");
 
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
 		$consulta =$objetoAccesoDato->RetornarConsulta("
 			INSERT into 
-			autos (patente,ingreso)
-			values(:patente,:ingreso)"
+			autos (patente,porcentaje)
+			values(:patente,:porcentaje)"
 			);
 		$consulta->bindValue(':patente',$patente, PDO::PARAM_STR);
-		$consulta->bindValue(':ingreso',$ingreso, PDO::PARAM_STR);
+		$consulta->bindValue(':porcentaje',$porcentaje, PDO::PARAM_STR);
 		$consulta->execute();
 		return $objetoAccesoDato->RetornarUltimoIdInsertado();
 	}

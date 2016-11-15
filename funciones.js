@@ -7,6 +7,7 @@ function ingresar()
 		data:{
 			boton: "ingresar",
 			patente: $("#patente").val(),
+			porcentaje: $("#porcentaje").val(),
 		}});
 	//success: alert("GESTIONANDO AUTO");
 	//success: swal("Gestionando auto");
@@ -15,22 +16,22 @@ function ingresar()
 		{
 			if (resultado=="ingresar")
 			{
-				swal("Auto ingresado exitosamente", "", "success");
+				swal("Producto ingresado exitosamente", "", "success");
 				//alert("Auto Ingresado Exitosamente");
 				estacionados();
 			}
 			else if (resultado=="vacio")
 			{
 				
-				swal("Ingrese una patente");
+				swal("Ingrese un Producto");
 				//alert("Ingrese una patente");
 			}
-			else
+			/*else
 			{
 				swal("A facturar: $" + resultado, "" ,"success");
 				//alert("A facturar: $" + resultado);
 				estacionados();
-			}
+			}*/
 			
 		});
 
@@ -152,6 +153,28 @@ function tablaUsuarios()
 }
 
 function estacionados()
+{
+	var f=$.ajax
+	(
+		{
+			url:"nexo.php",
+			type:"post",
+			data:
+			{
+				boton:"estacionados"
+			}
+		}
+	);
+	f.done
+	(
+		function(algo) 
+		{
+			$("#tabla").html(algo);
+		}
+	);	
+}
+
+function EliminarProducto(id)
 {
 	var f=$.ajax
 	(

@@ -49,10 +49,11 @@ if (!isset($_SESSION['usuario']))
     <button type="button" class="round medium green button" onclick="salir()">Logout</button>
 
       <form onsubmit="return false" >
-        <p><input type="text" name="patente" id="patente" placeholder="Ingrese Patente"></p>
+        <p><input type="text" name="patente" id="patente" placeholder="Ingrese Nombre"></p>
+        <p><input type="text" name="porcentaje" id="porcentaje" placeholder="Ingrese Porcentaje"></p>
         <br>
-        <button type="button" class="round medium blue button" onclick="ingresar()">Gestionar</button>
-        <button type="button" class="round medium blue button" onclick="estacionados()">Estacionados</button>
+        <button type="button" class="round medium blue button" onclick="ingresar()">Ingresar Producto</button>
+        <button type="button" class="round medium blue button" onclick="estacionados()">Lista de Productos</button>
         <?php
           if ($_SESSION['admin']==1)
           {

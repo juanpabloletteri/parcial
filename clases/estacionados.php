@@ -22,8 +22,9 @@ class estacionados
 		$tabla= "<table class='table table-hover table-responsive'>
 				<thead>
 					<tr>
-						<th>  Patente   </th>
-						<th>  Ingreso   </th>				
+						<th>  Nombre   </th>
+						<th>  Porcentaje   </th>
+						<th>  Accion   </th>				
 					</tr> 
 				</thead>";   	
 
@@ -31,7 +32,10 @@ class estacionados
 			{
 				$tabla.= " 	<tr>
 							<td>".$personaAux->patente."</td>
-							<td>".$personaAux->ingreso."</td>
+							<td>".$personaAux->porcentaje."</td>
+							<td><input type='button' class='round medium orange button' value='Eliminar' id='btnEliminar' onclick='EliminarProducto($personaAux->id)'/>
+                                
+                         
 						</tr>";
 			}	
 		$tabla.= "</table>";
