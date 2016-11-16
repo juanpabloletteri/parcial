@@ -28,7 +28,7 @@ function ingresar()
 			}
 			else if (resultado=="rango")
 				{
-					swal("Porcentaje ingresado fuera de rango");
+					swal("Porcentaje ingresado fuera de rango (entre 0 y 100%)");
 				};
 			/*else
 			{
@@ -201,6 +201,7 @@ function EliminarProducto(id)
 		
 		function(algo) 
 		{
+			swal("Producto eliminado exitosamente", "", "success");
 			$("#tabla").html(algo);
 			estacionados();
 		}
